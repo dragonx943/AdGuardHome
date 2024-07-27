@@ -1,0 +1,433 @@
+http:
+  pprof:
+    port: 6060
+    enabled: false
+  address: 0.0.0.0:80
+  session_ttl: 720h
+users:
+  - name: dra
+    password: $2a$10$UpFamQ/shJ6fkjEX/kMFVOkUr1fsCc3Hiws.01gSa/O1ZCEkgF23G
+auth_attempts: 5
+block_auth_min: 15
+http_proxy: ""
+language: vi
+theme: dark
+dns:
+  bind_hosts:
+    - 0.0.0.0
+  port: 53
+  anonymize_client_ip: false
+  ratelimit: 0
+  ratelimit_subnet_len_ipv4: 24
+  ratelimit_subnet_len_ipv6: 56
+  ratelimit_whitelist: []
+  refuse_any: true
+  upstream_dns:
+    - 103.178.234.160
+  upstream_dns_file: ""
+  bootstrap_dns:
+    - 9.9.9.10
+    - 149.112.112.10
+    - 2620:fe::10
+    - 2620:fe::fe:10
+  fallback_dns:
+    - 8.8.8.8
+    - 8.8.4.4
+  upstream_mode: load_balance
+  fastest_timeout: 1s
+  allowed_clients: []
+  disallowed_clients: []
+  blocked_hosts:
+    - version.bind
+    - id.server
+    - hostname.bind
+  trusted_proxies:
+    - 127.0.0.0/8
+    - ::1/128
+  cache_size: 4194304
+  cache_ttl_min: 0
+  cache_ttl_max: 0
+  cache_optimistic: false
+  bogus_nxdomain: []
+  aaaa_disabled: false
+  enable_dnssec: false
+  edns_client_subnet:
+    custom_ip: ""
+    enabled: false
+    use_custom: false
+  max_goroutines: 300
+  handle_ddr: true
+  ipset: []
+  ipset_file: ""
+  bootstrap_prefer_ipv6: false
+  upstream_timeout: 10s
+  private_networks: []
+  use_private_ptr_resolvers: true
+  local_ptr_upstreams: []
+  use_dns64: false
+  dns64_prefixes: []
+  serve_http3: false
+  use_http3_upstreams: false
+  serve_plain_dns: true
+  hostsfile_enabled: true
+tls:
+  enabled: false
+  server_name: ""
+  force_https: false
+  port_https: 443
+  port_dns_over_tls: 853
+  port_dns_over_quic: 853
+  port_dnscrypt: 0
+  dnscrypt_config_file: ""
+  allow_unencrypted_doh: false
+  certificate_chain: ""
+  private_key: ""
+  certificate_path: ""
+  private_key_path: ""
+  strict_sni_check: false
+querylog:
+  dir_path: ""
+  ignored: []
+  interval: 2160h
+  size_memory: 1000
+  enabled: true
+  file_enabled: true
+statistics:
+  dir_path: ""
+  ignored: []
+  interval: 24h
+  enabled: true
+filters:
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
+    name: AdGuard DNS filter
+    id: 1
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt
+    name: AdAway Default Blocklist
+    id: 2
+  - enabled: true
+    url: https://big.oisd.nl
+    name: big oisd
+    id: 1717238182
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_33.txt
+    name: Steven Black's List
+    id: 1717238682
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_27.txt
+    name: OISD Blocklist Big
+    id: 1717238683
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_3.txt
+    name: Peter Lowe's Blocklist
+    id: 1717238684
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_5.txt
+    name: OISD Blocklist Small
+    id: 1717238685
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_49.txt
+    name: HaGeZi's Ultimate Blocklist
+    id: 1717238686
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_51.txt
+    name: HaGeZi's Pro++ Blocklist
+    id: 1717238687
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_48.txt
+    name: HaGeZi's Pro Blocklist
+    id: 1717238688
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_34.txt
+    name: HaGeZi's Normal Blocklist
+    id: 1717238689
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_4.txt
+    name: Dan Pollock's List
+    id: 1717238690
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_53.txt
+    name: AWAvenue Ads Rule
+    id: 1717238691
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_59.txt
+    name: AdGuard DNS Popup Hosts filter
+    id: 1717238692
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_38.txt
+    name: 1Hosts (mini)
+    id: 1717238693
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_24.txt
+    name: 1Hosts (Lite)
+    id: 1717238694
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_39.txt
+    name: Dandelion Sprout's Anti Push Notifications
+    id: 1717238695
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_6.txt
+    name: Dandelion Sprout's Game Console Adblock List
+    id: 1717238696
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_45.txt
+    name: HaGeZi's Allowlist Referral
+    id: 1717238697
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_46.txt
+    name: HaGeZi's Anti-Piracy Blocklist
+    id: 1717238698
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_47.txt
+    name: HaGeZi's Gambling Blocklist
+    id: 1717238699
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_7.txt
+    name: Perflyst and Dandelion Sprout's Smart-TV Blocklist
+    id: 1717238700
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_57.txt
+    name: ShadowWhisperer's Dating List
+    id: 1717238701
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_23.txt
+    name: WindowsSpyBlocker - Hosts spy rules
+    id: 1717238702
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_16.txt
+    name: 'VNM: ABPVN List'
+    id: 1717238703
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_11.txt
+    name: Malicious URL Blocklist (URLHaus)
+    id: 1717238704
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_50.txt
+    name: uBlock₀ filters – Badware risks
+    id: 1717238705
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_9.txt
+    name: The Big List of Hacked Malware Web Sites
+    id: 1717238706
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_31.txt
+    name: Stalkerware Indicators List
+    id: 1717238707
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_42.txt
+    name: ShadowWhisperer's Malware List
+    id: 1717238708
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_18.txt
+    name: Phishing Army
+    id: 1717238709
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_10.txt
+    name: Scam Blocklist by DurableNapkin
+    id: 1717238710
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_8.txt
+    name: NoCoin Filter List
+    id: 1717238711
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_56.txt
+    name: HaGeZi's The World's Most Abused TLDs
+    id: 1717238712
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_44.txt
+    name: HaGeZi's Threat Intelligence Feeds
+    id: 1717238713
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_52.txt
+    name: HaGeZi's Encrypted DNS/VPN/TOR/Proxy Bypass
+    id: 1717238714
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_54.txt
+    name: HaGeZi's DynDNS Blocklist
+    id: 1717238715
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_55.txt
+    name: HaGeZi's Badware Hoster Blocklist
+    id: 1717238716
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_12.txt
+    name: Dandelion Sprout's Anti-Malware List
+    id: 1717238717
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_30.txt
+    name: Phishing URL Blocklist (PhishTank and OpenPhish)
+    id: 1717238718
+  - enabled: true
+    url: https://raw.githubusercontent.com/d3ward/toolz/master/src/d3host.txt
+    name: d3hosts
+    id: 1717238719
+  - enabled: true
+    url: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2024.txt
+    name: ublock test
+    id: 1717238720
+  - enabled: true
+    url: https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt
+    name: ublock test2
+    id: 1717238721
+  - enabled: true
+    url: https://raw.githubusercontent.com/Levi2288/AdvancedBlockList/main/Lists/google_amp.txt
+    name: google_amp
+    id: 1717238722
+  - enabled: true
+    url: https://raw.githubusercontent.com/ewpratten/youtube_ad_blocklist/master/blocklist.txt
+    name: yt blocklist
+    id: 1717238723
+  - enabled: true
+    url: https://raw.githubusercontent.com/dshagaa/youtube_ad_blocklist/master/blocklist.txt
+    name: yt blocklist remaster
+    id: 1717238724
+  - enabled: true
+    url: https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/black.list
+    name: yt ads
+    id: 1717238725
+  - enabled: true
+    url: https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/crowed_list.txt
+    name: yt crowed list
+    id: 1717238726
+  - enabled: true
+    url: https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt
+    name: youtube lists (beta)
+    id: 1717238727
+  - enabled: true
+    url: https://raw.githubusercontent.com/tdgomes/Ads-Youtube-PT/master/youtubeads.txt
+    name: old yt ads list
+    id: 1717238728
+  - enabled: true
+    url: https://raw.githubusercontent.com/Isaaker/Spotify-AdsList/main/Lists/adguard.txt
+    name: spotify ads
+    id: 1717238729
+  - enabled: true
+    url: https://raw.githubusercontent.com/blocklistproject/Lists/master/youtube.txt
+    name: ano ytb ads list
+    id: 1717238730
+  - enabled: true
+    url: https://raw.githubusercontent.com/dragonx943/listcaidaubuoi/main/blacklist.txt
+    name: by draken
+    id: 1717336585
+whitelist_filters:
+  - enabled: true
+    url: https://raw.githubusercontent.com/dragonx943/listcaidaubuoi/main/whitelist.txt
+    name: draken
+    id: 1717238731
+user_rules:
+  - '! 2023-09-30 https://fvip.link'
+  - '||media.mpartners.asia/uploads/796-AFF-Sep_300x300_VN.gif$image'
+  - '||blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjEpctg1dwLTzX5jAiSY3CPa5zucFttqyO4pMBWN5uAfKBBw9wrXTV057dKeQC6DVl0zZqgbkwpWolZj-6UdddgaZIlrtzfmOXMFkMLI2aaxIbIP3z5sg4a3vRHvJ8qpS58_7mtXNHoAR_auaVjqc6Sc7UcBfmQHdTNt1ADrdtLMCy0g9eG65YVuuR_nJL-/s728/ri8.gif$image'
+  - '||media.mpartners.asia/uploads/796-AFF-Sep_300x300_VN.gif$image'
+  - youtube.com##+js(set, yt.config_.openPopupConfig.supportedPopups.adBlockMessageViewModel, false)
+  - youtube.com##+js(set, Object.prototype.adBlocksFound, 0)
+  - youtube.com##+js(set, ytplayer.config.args.raw_player_response.adPlacements, [])
+  - youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
+  - www.youtube.com##+js(nano-stb, resolve(1), *, 0.001)
+  - '! 2023-10-27 https://web1s.asia'
+  - '||cdn.bmcdn6.com/p/64ddf5a91d47782681eb026a/?source=https%253A%252F%252Fweb1s.asia%252FDnpHZ1MXan%252F&sourceid=766557527726&ent=&we=0&fid=375fce768303148a711f9eab6437ecc3&fidnoua=eec9a4c299aa40becac7e2636148082a&impid=c79520a4-d570-41a8-a7c6-4e04d5392e1d&sessionId=a081e283-7df4-4493-8e67-72d42f5b2454&pageViewUuid=9334012b-1687-4666-8048-3d397f5c41bc&ua=Mozilla%252F5.0%2520(Windows%2520NT%252010.0%253B%2520Win64%253B%2520x64)%2520AppleWebKit%252F537.36%2520(KHTML%252C%2520like%2520Gecko)%2520Chrome%252F118.0.0.0%2520Safari%252F537.36&sig=0x00000&blocksubid=0$subdocument'
+  - '! Youtube'
+  - '!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)'
+  - www.youtube.com#%#//scriptlet('abort-on-stack-trace', 'btoa', '/[A-Za-z]lb \S+polymer/')
+  - '! For the closable popup'
+  - youtube.com#?#ytd-enforcement-message-view-model:has(> div.ytd-enforcement-message-view-model)
+  - 'youtube.com#$#tp-yt-iron-overlay-backdrop { display: none !important; }'
+  - 'youtube.com#$?#tp-yt-paper-dialog:has(> ytd-enforcement-message-view-model > div.ytd-enforcement-message-view-model) { remove: true; }'
+  - '! For the overlay'
+  - 'youtube.com#$#ytd-watch-flexy[player-unavailable] #player-container-outer.ytd-watch-flexy { visibility: visible !important; }'
+  - 'youtube.com#$?#yt-playability-error-supported-renderers:has(yt-button-view-model[dialog-dismiss]) { display: none !important; }'
+  - '!#endif'
+  - '! 2024-02-14 https://top.gg'
+  - '||toppgg.nyc3.cdn.digitaloceanspaces.com/images/topgg-premium-header.png$image'
+  - top.gg##.eFimHA.AditudeAdHeaderHero__AdContainer-sc-s24zf8-0
+  - top.gg##.hUUhkN.AditudeOutstreamVideoAside__AdContainer-sc-1mx0p1r-0
+  - top.gg##.gtaibM.AditudeOustreamVideoVote__AdContainer-sc-18pq5gq-0
+  - top.gg##div#ad-container.dIbFsY.AditudeAdMediumRect__AdContainer-sc-9wmwq1-0:nth-of-type(1)
+  - top.gg##div#ad-container.dIbFsY.AditudeAdMediumRect__AdContainer-sc-9wmwq1-0:nth-of-type(2)
+  - top.gg##.evBXmu.AditudeAdFloatingFooter__AdContainer-sc-58jfa-1
+  - '! 2024-03-21 https://top.gg'
+  - top.gg##.fhIZHu.AdOustreamVideoVote__AdContainer-sc-1tume0h-0
+  - top.gg##.Xxyyu.AdFloatingFooter__AdContainer-sc-x3jwtn-1
+  - '! 2024-04-17 https://ask.fm'
+  - '||cbgd.ask.fm/aba/be1d8/c3f5/4371/bb98/b2e7b797eae1/original/2797740.jpg$image'
+  - '||cbgd.ask.fm/aba/be1d8/c3f5/4371/bb98/b2e7b797eae1/original/2797740.jpg$image'
+  - ask.fm##.lightbox_overlay
+  - '! 29 thg 5, 2024 https://www.photopea.com'
+  - '||play.google.com^$important'
+  - '||clients2.google.com^$important'
+  - '||clients2.google.com^$important'
+  - '||ad.doubleclick.net^$important'
+  - '||adservice.google.com^$important'
+  - '||clients4.google.com^$important'
+  - '@@||panel.lorem.ltd^$important'
+  - ""
+dhcp:
+  enabled: false
+  interface_name: ""
+  local_domain_name: lan
+  dhcpv4:
+    gateway_ip: ""
+    subnet_mask: ""
+    range_start: ""
+    range_end: ""
+    lease_duration: 86400
+    icmp_timeout_msec: 1000
+    options: []
+  dhcpv6:
+    range_start: ""
+    lease_duration: 86400
+    ra_slaac_only: false
+    ra_allow_slaac: false
+filtering:
+  blocking_ipv4: ""
+  blocking_ipv6: ""
+  blocked_services:
+    schedule:
+      time_zone: UTC
+    ids: []
+  protection_disabled_until: null
+  safe_search:
+    enabled: false
+    bing: true
+    duckduckgo: true
+    google: false
+    pixabay: true
+    yandex: false
+    youtube: false
+  blocking_mode: default
+  parental_block_host: family-block.dns.adguard.com
+  safebrowsing_block_host: standard-block.dns.adguard.com
+  rewrites: []
+  safebrowsing_cache_size: 1048576
+  safesearch_cache_size: 1048576
+  parental_cache_size: 1048576
+  cache_time: 30
+  filters_update_interval: 1
+  blocked_response_ttl: 10
+  filtering_enabled: true
+  parental_enabled: false
+  safebrowsing_enabled: true
+  protection_enabled: true
+clients:
+  runtime_sources:
+    whois: true
+    arp: true
+    rdns: true
+    dhcp: true
+    hosts: true
+  persistent: []
+log:
+  enabled: true
+  file: ""
+  max_backups: 0
+  max_size: 100
+  max_age: 3
+  compress: false
+  local_time: false
+  verbose: false
+os:
+  group: ""
+  user: ""
+  rlimit_nofile: 0
+schema_version: 28
